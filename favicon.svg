@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <!-- Deep purple gradient block matching the primary accent #6C3FC5 -->
+    <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#4A1F9C;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <!-- Premium squircle background -->
+    <rect width="512" height="512" rx="128" fill="url(#grad1)" />
+    <!-- Classic, elegant "R" using standard cross-platform serif -->
+    <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="Georgia, Times New Roman, serif" font-weight="bold" font-size="320" fill="#ffffff">R</text>
+</svg>
