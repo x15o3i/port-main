@@ -1,0 +1,379 @@
+/* ============================================================
+   projects.css  —  Styles exclusive to the Projects page
+   ============================================================ */
+
+/* ── Page hero ── */
+.proj-page-hero {
+    padding: 6rem 5% 4rem;
+    background: linear-gradient(135deg, #f8f5ff 0%, #ffffff 100%);
+    border-bottom: 1px solid #ede9fe;
+    text-align: center;
+}
+
+.proj-page-hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.proj-page-eyebrow {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--primary-accent);
+    margin-bottom: 1rem;
+}
+
+.proj-page-title {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    color: var(--text-dark);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.proj-page-subtitle {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ── Make logo in nav work as an <a> ── */
+.logo {
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+/* ── Main project list ── */
+.proj-main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+/* ── Individual project detail card ── */
+.proj-detail-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px -8px rgba(108, 63, 197, 0.08); /* softer, wider spread */
+    background: #ffffff;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.proj-detail-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 60px -12px rgba(108, 63, 197, 0.16);
+}
+
+/* Alternate: visual on the right */
+.proj-detail-card--alt {
+    direction: rtl;
+}
+.proj-detail-card--alt > * {
+    direction: ltr;
+}
+
+/* Visual / image side */
+.proj-detail-visual {
+    min-height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Vouchpath — showcase panel */
+.vouchpath-visual {
+    background: #ffffff; /* Fallback for the image's background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.proj-phone-mockup {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.proj-detail-card:hover .proj-phone-mockup {
+    transform: scale(1.03);
+}
+
+/* NACOS / AULByeats — web app showcase panels */
+.nacos-visual,
+.aulbyeats-visual {
+    background: #ffffff; /* Fallback for image background */
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0; /* Removing purple border effect */
+}
+
+.proj-web-mockup {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 0; /* Stripped to fit cleanly */
+    box-shadow: none; /* Stripped to fit cleanly */
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.proj-detail-card:hover .proj-web-mockup {
+    transform: scale(1.02);
+}
+
+
+
+
+
+/* Text side */
+.proj-detail-body {
+    padding: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Tags */
+.proj-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.proj-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 0.3rem 0.85rem;
+    border-radius: 50px;
+    background: #ede9fe;
+    color: var(--primary-accent);
+}
+
+.proj-detail-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin-top: 0.25rem;
+}
+
+.proj-detail-period {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.proj-detail-desc {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Highlights list */
+.proj-highlights {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin: 0.25rem 0;
+}
+
+.proj-highlights li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+.proj-highlights li i {
+    color: var(--primary-accent);
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.proj-tools {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    padding-top: 0.25rem;
+}
+
+.proj-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    align-self: flex-start;
+    border: none;
+    cursor: pointer;
+}
+
+/* ── Upcoming Projects ── */
+.upcoming-section {
+    background: #f8f5ff;
+    padding: 6rem 5%;
+    border-top: 1px solid #ede9fe;
+}
+
+.upcoming-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.upcoming-subtext {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1.05rem;
+    margin-bottom: 3.5rem;
+}
+
+.upcoming-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.upcoming-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 8px 30px -4px rgba(108, 63, 197, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    border: 1px solid rgba(237, 233, 254, 0.6);
+}
+
+.upcoming-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 48px -8px rgba(108, 63, 197, 0.14);
+}
+
+/* Subtle top accent bar */
+.upcoming-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-accent), var(--light-accent));
+}
+
+.upcoming-icon {
+    font-size: 2rem;
+    color: var(--primary-accent);
+    margin-bottom: 0.25rem;
+}
+
+.upcoming-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    background: #dbeafe;
+    color: #1d4ed8;
+    align-self: flex-start;
+}
+
+.upcoming-badge--research {
+    background: #fef9c3;
+    color: #854d0e;
+}
+
+.upcoming-badge--concept {
+    background: #ede9fe;
+    color: var(--primary-accent);
+}
+
+.upcoming-title {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--text-dark);
+}
+
+.upcoming-desc {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    flex: 1;
+}
+
+.upcoming-eta {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary-accent);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 992px) {
+    .proj-detail-card,
+    .proj-detail-card--alt {
+        grid-template-columns: 1fr;
+        direction: ltr;
+    }
+
+    .proj-detail-visual {
+        min-height: 260px;
+    }
+
+    .proj-detail-body {
+        padding: 2.5rem;
+    }
+
+    .upcoming-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .proj-page-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .upcoming-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .proj-page-title {
+        font-size: 2.5rem;
+    }
+
+    .proj-detail-title {
+        font-size: 1.6rem;
+    }
+
+    .proj-detail-body {
+        padding: 2rem 1.5rem;
+    }
+}
