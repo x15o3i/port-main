@@ -19,4 +19,4 @@ This website uses purely static web technologies. Open `index.html` in any moder
 
 ## Contact
 Info: info@raphaelfulfilled.tech
-Website: Raphael Fulfilled
+Website: raphaelfulfilled.tech
