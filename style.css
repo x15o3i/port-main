@@ -191,6 +191,7 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
     opacity: 0;
     animation: fadeRole 6s infinite;
 }
@@ -833,6 +834,10 @@ nav {
         flex-direction: column;
         text-align: center;
         gap: 3rem;
+    }
+
+    .role-animation {
+        margin-bottom: 1.5rem;
     }
 
     .hero-image-wrapper {
