@@ -10,7 +10,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,7 +24,7 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">Raphael Fulfilled</a>
+            <a href="index.html" class="logo">Fulfilled</a>
             <button class="mobile-toggle" aria-label="Toggle Navigation">
                 <i class="fas fa-bars"></i>
             </button>
@@ -41,7 +41,7 @@
         <div class="proj-page-hero-inner">
             <span class="proj-page-eyebrow">My Work</span>
             <h1 class="proj-page-title">Projects</h1>
-            <p class="proj-page-subtitle">A detailed look at every project I've worked on — from enterprise-grade product design to grassroots community campaigns. Upcoming projects are also previewed below.</p>
+            <p class="proj-page-subtitle">A detailed look at every project I've worked on — from enterprise-grade product design to grassroots community campaigns.</p>
         </div>
     </header>
 
@@ -154,44 +154,6 @@
 
     </main>
 
-
-    <!-- ─── UPCOMING PROJECTS ─── -->
-    <section class="upcoming-section">
-        <div class="upcoming-inner">
-            <h2 class="section-title-center">Coming Soon</h2>
-            <div class="title-underline"></div>
-            <p class="upcoming-subtext">Projects currently in design or research phase. Stay tuned.</p>
-
-            <div class="upcoming-grid">
-
-                <div class="upcoming-card">
-                    <div class="upcoming-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <div class="upcoming-badge">In Progress</div>
-                    <h3 class="upcoming-title">Mobile Banking Redesign</h3>
-                    <p class="upcoming-desc">A ground-up UX overhaul of a regional mobile banking app, focusing on accessibility and one-handed usability for a broad Nigerian demographic.</p>
-                    <div class="upcoming-eta"><i class="fas fa-clock"></i> Expected Q3 2026</div>
-                </div>
-
-                <div class="upcoming-card">
-                    <div class="upcoming-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <div class="upcoming-badge upcoming-badge--research">Research</div>
-                    <h3 class="upcoming-title">EdTech Learning Dashboard</h3>
-                    <p class="upcoming-desc">Designing an adaptive learning dashboard for tertiary students in Nigeria, incorporating data visualisation and personalised progress tracking.</p>
-                    <div class="upcoming-eta"><i class="fas fa-clock"></i> Expected Q4 2026</div>
-                </div>
-
-                <div class="upcoming-card">
-                    <div class="upcoming-icon"><i class="fas fa-chart-line"></i></div>
-                    <div class="upcoming-badge upcoming-badge--concept">Concept</div>
-                    <h3 class="upcoming-title">Investment Portfolio Tracker</h3>
-                    <p class="upcoming-desc">A lightweight desktop and mobile tracker that visualises investment performance for retail investors — clean, data-forward, and anxiety-reducing by design.</p>
-                    <div class="upcoming-eta"><i class="fas fa-clock"></i> Expected 2027</div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="social-links">
@@ -220,14 +182,10 @@
             }, observerOptions);
 
             // Dynamically add base animation classes
-            const slideUpSelectors = '.proj-page-hero-inner, .proj-detail-card, .upcoming-card';
+            const slideUpSelectors = '.proj-page-hero-inner, .proj-detail-card';
             
             document.querySelectorAll(slideUpSelectors).forEach((el, index) => {
                 el.classList.add('slide-up');
-                // Stagger upcoming cards
-                if(el.classList.contains('upcoming-card')) {
-                    el.style.transitionDelay = `${(index % 3) * 100}ms`;
-                }
             });
 
             // Observe all animated elements

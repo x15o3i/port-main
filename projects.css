@@ -44,7 +44,12 @@
 /* ── Make logo in nav work as an <a> ── */
 .logo {
     text-decoration: none;
-    color: var(--text-dark);
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-style: bold;
+    font-size: 1.6rem;
+    letter-spacing: 1.4px;
+    color: var(--primary-accent);
 }
 
 /* ── Main project list ── */
@@ -114,21 +119,21 @@
 /* NACOS / AULByeats — web app showcase panels */
 .nacos-visual,
 .aulbyeats-visual {
-    background: #ffffff; /* Fallback for image background */
+    background: #faf8ff;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding: 0; /* Removing purple border effect */
+    padding: 3rem;
 }
 
 .proj-web-mockup {
     width: 100%;
     max-width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: top;
-    border-radius: 0; /* Stripped to fit cleanly */
-    box-shadow: none; /* Stripped to fit cleanly */
+    object-fit: contain;
+    object-position: center;
+    border-radius: 12px;
+    filter: drop-shadow(0 15px 30px rgba(108, 63, 197, 0.15));
     display: block;
     transition: transform 0.4s ease;
 }
@@ -230,110 +235,6 @@
     cursor: pointer;
 }
 
-/* ── Upcoming Projects ── */
-.upcoming-section {
-    background: #f8f5ff;
-    padding: 6rem 5%;
-    border-top: 1px solid #ede9fe;
-}
-
-.upcoming-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.upcoming-subtext {
-    text-align: center;
-    color: var(--text-light);
-    font-size: 1.05rem;
-    margin-bottom: 3.5rem;
-}
-
-.upcoming-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-
-.upcoming-card {
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 2.5rem 2rem;
-    box-shadow: 0 8px 30px -4px rgba(108, 63, 197, 0.06);
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-    border: 1px solid rgba(237, 233, 254, 0.6);
-}
-
-.upcoming-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 16px 48px -8px rgba(108, 63, 197, 0.14);
-}
-
-/* Subtle top accent bar */
-.upcoming-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary-accent), var(--light-accent));
-}
-
-.upcoming-icon {
-    font-size: 2rem;
-    color: var(--primary-accent);
-    margin-bottom: 0.25rem;
-}
-
-.upcoming-badge {
-    display: inline-block;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding: 0.25rem 0.75rem;
-    border-radius: 50px;
-    background: #dbeafe;
-    color: #1d4ed8;
-    align-self: flex-start;
-}
-
-.upcoming-badge--research {
-    background: #fef9c3;
-    color: #854d0e;
-}
-
-.upcoming-badge--concept {
-    background: #ede9fe;
-    color: var(--primary-accent);
-}
-
-.upcoming-title {
-    font-family: var(--font-heading);
-    font-size: 1.4rem;
-    color: var(--text-dark);
-}
-
-.upcoming-desc {
-    color: var(--text-light);
-    font-size: 0.95rem;
-    line-height: 1.65;
-    flex: 1;
-}
-
-.upcoming-eta {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--primary-accent);
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    margin-top: 0.5rem;
-}
 
 /* ── Responsive ── */
 @media (max-width: 992px) {
@@ -351,19 +252,12 @@
         padding: 2.5rem;
     }
 
-    .upcoming-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
     .proj-page-title {
         font-size: 3rem;
     }
 }
 
 @media (max-width: 640px) {
-    .upcoming-grid {
-        grid-template-columns: 1fr;
-    }
 
     .proj-page-title {
         font-size: 2.5rem;
