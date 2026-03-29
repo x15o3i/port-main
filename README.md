@@ -18,5 +18,5 @@ A professional, minimal portfolio website for Raphael Fulfilled, Product and UI/
 This website uses purely static web technologies. Open `index.html` in any modern browser directly from your file system, or serve it using a simple local server to view it.
 
 ## Contact
-Info: info@raphaelfulfilled.tech
-Website: raphaelfulfilled.tech
+[Info:] [info@raphaelfulfilled.tech]
+[Website:] (https://raphaelfulfilled.tech)
