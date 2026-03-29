@@ -742,8 +742,21 @@ nav {
 /* --- Spotify Integrations --- */
 .spotify-section {
     max-width: 1000px;
-    margin: 2rem auto 4rem auto;
+    margin: 2rem auto 6rem auto;
     padding: 0 5%;
+}
+
+.spotify-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.spotify-subtext {
+    color: var(--text-light);
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
 .spotify-wrapper {
@@ -823,11 +836,6 @@ nav {
     font-size: 1.1rem;
     line-height: 1.3;
     transition: color 0.2s ease;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    line-clamp: 1;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
 }
 
 #track-title:hover {
@@ -837,12 +845,8 @@ nav {
 #track-artist {
     color: var(--text-light);
     font-size: 0.9rem;
-    margin-top: 0.2rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    line-clamp: 1;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    margin-top: 0.3rem;
+    line-height: 1.4;
 }
 
 .spotify-not-playing {
@@ -882,10 +886,10 @@ nav {
         align-items: stretch;
     }
     .spotify-iframe-container {
-        flex: 2;
+        flex: 5;
     }
     .spotify-now-playing-container {
-        flex: 1;
+        flex: 4;
     }
 }
 

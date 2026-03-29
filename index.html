@@ -240,7 +240,7 @@
                     <a href="projects.html#vouchpath" class="btn btn-outline rounded">View Project</a>
                 </div>
                 <div class="project-img-container vouchpath-img-wrap">
-                    <img src="./images/Free iPhone Air.png" alt="Vouchpath app mockup" class="vouchpath-mockup">
+                    <img src="./images/vouchpath.png" alt="Vouchpath app mockup" class="vouchpath-mockup">
                 </div>
             </div>
 
@@ -255,6 +255,47 @@
         </div>
     </section>
 
+
+    <!-- Spotify Integration Section -->
+    <section class="spotify-section slide-up">
+        <div class="spotify-header">
+            <h2 class="section-title-center">Audio Fuel</h2>
+            <div class="title-underline"></div>
+            <p class="spotify-subtext">Little peek into what powers my flow.</p>
+        </div>
+
+        <div class="spotify-wrapper">
+            <!-- Spotify Playlist Iframe -->
+            <div class="spotify-iframe-container">
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4c3paFVwPP7WYChMe3GyDx?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+
+            <!-- Spotify Now Playing Widget -->
+            <div class="spotify-now-playing-container">
+                <div class="now-playing-header">
+                    <i class="fab fa-spotify spotify-icon"></i>
+                    <span>Now Playing</span>
+                </div>
+                
+                <div id="spotify-widget" class="spotify-widget hidden">
+                    <img id="track-art" src="" alt="Album Art" width="64" height="64" />
+                    <div class="track-info">
+                        <a id="track-title" href="" target="_blank" rel="noopener noreferrer"></a>
+                        <p id="track-artist"></p>
+                    </div>
+                    <div class="equalizer">
+                        <span class="bar bar-1"></span>
+                        <span class="bar bar-2"></span>
+                        <span class="bar bar-3"></span>
+                    </div>
+                </div>
+
+                <div id="spotify-not-playing" class="spotify-not-playing">
+                    <p>Not listening to anything right now.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Contact Section -->
     <section class="contact-section" id="contacts">
@@ -288,41 +329,6 @@
                     Send Message <i class="fas fa-paper-plane"></i>
                 </button>
             </form>
-        </div>
-    </section>
-
-    <!-- Spotify Integration Section -->
-    <section class="spotify-section slide-up">
-        <div class="spotify-wrapper">
-            <!-- Spotify Playlist Iframe -->
-            <div class="spotify-iframe-container">
-                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4c3paFVwPP7WYChMe3GyDx?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </div>
-
-            <!-- Spotify Now Playing Widget -->
-            <div class="spotify-now-playing-container">
-                <div class="now-playing-header">
-                    <i class="fab fa-spotify spotify-icon"></i>
-                    <span>Now Playing</span>
-                </div>
-                
-                <div id="spotify-widget" class="spotify-widget hidden">
-                    <img id="track-art" src="" alt="Album Art" width="64" height="64" />
-                    <div class="track-info">
-                        <a id="track-title" href="" target="_blank" rel="noopener noreferrer"></a>
-                        <p id="track-artist"></p>
-                    </div>
-                    <div class="equalizer">
-                        <span class="bar bar-1"></span>
-                        <span class="bar bar-2"></span>
-                        <span class="bar bar-3"></span>
-                    </div>
-                </div>
-
-                <div id="spotify-not-playing" class="spotify-not-playing">
-                    <p>Not listening to anything right now.</p>
-                </div>
-            </div>
         </div>
     </section>
     <!-- Social Sidebar (Desktop) -->
