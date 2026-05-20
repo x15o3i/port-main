@@ -32,6 +32,110 @@
 </head>
 <body>
 
+    <!-- ═══ Skeleton Loading Screen ═══ -->
+    <div class="skeleton-loader" id="skeletonLoader" aria-hidden="true">
+
+        <!-- Skeleton Nav -->
+        <div class="skeleton-nav">
+            <div class="skeleton-inner">
+                <div class="skeleton-logo skeleton-bone"></div>
+                <div class="skeleton-nav-links">
+                    <div class="skeleton-nav-link skeleton-bone"></div>
+                    <div class="skeleton-nav-link skeleton-bone"></div>
+                    <div class="skeleton-nav-link skeleton-bone"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skeleton Hero -->
+        <div class="skeleton-hero">
+            <div class="skeleton-inner">
+                <div class="skeleton-hero-content">
+                    <div class="skeleton-role skeleton-bone"></div>
+                    <div class="skeleton-title-line skeleton-bone"></div>
+                    <div class="skeleton-title-line skeleton-bone"></div>
+                    <div class="skeleton-desc-line skeleton-bone"></div>
+                    <div class="skeleton-desc-line skeleton-bone"></div>
+                    <div class="skeleton-desc-line skeleton-bone"></div>
+                    <div class="skeleton-buttons">
+                        <div class="skeleton-btn skeleton-bone"></div>
+                        <div class="skeleton-btn skeleton-bone"></div>
+                    </div>
+                </div>
+                <div class="skeleton-hero-image">
+                    <div class="skeleton-avatar skeleton-bone"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skeleton About -->
+        <div class="skeleton-about">
+            <div class="skeleton-inner">
+                <div class="skeleton-about-img">
+                    <div class="skeleton-circle skeleton-bone"></div>
+                </div>
+                <div class="skeleton-about-text">
+                    <div class="skeleton-section-title skeleton-bone"></div>
+                    <div class="skeleton-text-line skeleton-bone"></div>
+                    <div class="skeleton-text-line skeleton-bone"></div>
+                    <div class="skeleton-text-line skeleton-bone"></div>
+                    <div class="skeleton-text-line skeleton-bone"></div>
+                    <div class="skeleton-text-line skeleton-bone"></div>
+                    <div class="skeleton-resume-btn skeleton-bone"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skeleton Skills -->
+        <div class="skeleton-skills">
+            <div class="skeleton-inner">
+                <div class="skeleton-eyebrow skeleton-bone"></div>
+                <div class="skeleton-skills-title skeleton-bone"></div>
+                <div class="skeleton-skills-grid">
+                    <div class="skeleton-skills-col">
+                        <div class="skeleton-group-title skeleton-bone"></div>
+                        <div class="skeleton-cards-grid">
+                            <div class="skeleton-skill-card"></div>
+                            <div class="skeleton-skill-card"></div>
+                            <div class="skeleton-skill-card"></div>
+                            <div class="skeleton-skill-card"></div>
+                        </div>
+                    </div>
+                    <div class="skeleton-skills-col">
+                        <div class="skeleton-group-title skeleton-bone"></div>
+                        <div class="skeleton-cards-grid">
+                            <div class="skeleton-skill-card"></div>
+                            <div class="skeleton-skill-card"></div>
+                            <div class="skeleton-skill-card"></div>
+                            <div class="skeleton-skill-card"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Dismiss skeleton after all assets (images, fonts) are loaded
+        // Minimum display time of 400ms to prevent flash on cached loads
+        (function() {
+            var start = Date.now();
+            window.addEventListener('load', function() {
+                var elapsed = Date.now() - start;
+                var delay = Math.max(0, 400 - elapsed);
+                setTimeout(function() {
+                    var skeleton = document.getElementById('skeletonLoader');
+                    if (skeleton) {
+                        skeleton.classList.add('loaded');
+                        // Remove from DOM after transition completes
+                        setTimeout(function() { skeleton.remove(); }, 700);
+                    }
+                }, delay);
+            });
+        })();
+    </script>
+
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
