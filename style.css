@@ -313,6 +313,91 @@ body {
 .skeleton-skill-card:nth-child(3) { animation-delay: 0.2s; }
 .skeleton-skill-card:nth-child(4) { animation-delay: 0.3s; }
 
+/* ── Skeleton Projects ── */
+.skeleton-projects {
+    padding: 5rem 0;
+}
+.skeleton-projects .skeleton-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.skeleton-project-title {
+    width: 200px;
+    height: 38px;
+    border-radius: 8px;
+    margin-bottom: 4rem;
+}
+.skeleton-project-card {
+    width: 100%;
+    max-width: 1000px;
+    height: 600px;
+    border-radius: 24px;
+}
+
+/* ── Skeleton Contact ── */
+.skeleton-contact {
+    padding: 6rem 0;
+    background: #fafafa;
+}
+.skeleton-contact .skeleton-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 760px;
+}
+.skeleton-contact-title {
+    width: 240px;
+    height: 38px;
+    border-radius: 8px;
+    margin-bottom: 3rem;
+}
+.skeleton-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.skeleton-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+.skeleton-input {
+    width: 100%;
+    height: 52px;
+    border-radius: 10px;
+}
+.skeleton-textarea {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+}
+
+/* ── Skeleton Footer ── */
+.skeleton-footer {
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.skeleton-socials {
+    display: flex;
+    gap: 1.5rem;
+}
+.skeleton-social-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+.skeleton-copyright {
+    width: 200px;
+    height: 14px;
+    border-radius: 4px;
+}
+
 /* ── Responsive skeleton ── */
 @media (max-width: 992px) {
     .skeleton-hero .skeleton-inner {
@@ -691,7 +776,7 @@ nav {
     box-shadow: 0 16px 40px -8px rgba(108, 63, 197, 0.15);
 }
 
-/* Circular icon badge — colour driven by inline --icon-color */
+/* Circular icon badge - colour driven by inline --icon-color */
 .skill-icon-wrap {
     width: 60px;
     height: 60px;
@@ -915,7 +1000,7 @@ nav {
     height: 100%;
 }
 
-/* BusBoard project image — homepage card */
+/* BusBoard project image - homepage card */
 .busboard-img-wrap {
     background: #111827; /* Fallback for the image's background */
     display: flex;

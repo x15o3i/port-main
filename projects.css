@@ -1,5 +1,5 @@
 /* ============================================================
-   projects.css  —  Styles exclusive to the Projects page
+   projects.css  -  Styles exclusive to the Projects page
    ============================================================ */
 
 /* ── Page hero ── */
@@ -94,7 +94,7 @@
     align-items: center;
 }
 
-/* Vouchpath — showcase panel */
+/* Vouchpath - showcase panel */
 .vouchpath-visual {
     background: #ffffff; /* Fallback for the image's background */
     display: flex;
@@ -116,7 +116,7 @@
     transform: scale(1.03);
 }
 
-/* AULByeats — web app showcase panels */
+/* NACOS / AULByeats / BusBoard - web app showcase panels */
 .aulbyeats-visual {
     background: #faf8ff;
     align-items: center;
@@ -159,7 +159,7 @@
     transform: scale(1.02);
 }
 
-/* Image override — must come AFTER .proj-web-mockup base rule */
+/* Image override - must come AFTER .proj-web-mockup base rule */
 .docuverify-visual .proj-web-mockup,
 .nacos-visual .proj-web-mockup,
 .busboard-visual .proj-web-mockup {
