@@ -3,269 +3,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Raphael Fulfilled | Product & UI/UX Designer</title>
-    <link rel="icon" type="image/svg+xml" href="images/favicon.png">
-    <meta name="description" content="Browse all design projects by Raphael Fulfilled: from fintech platforms to campus financial literacy campaigns.">
+    <title>Projects | Raphael Fulfilled | Product &amp; UI/UX Designer</title>
+    <meta name="description" content="Browse all design and development projects by Raphael Fulfilled — from fintech platforms to campus apps.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Syne + DM Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Caveat:wght@400;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Shared CSS + Projects page CSS -->
+    <!-- SEO & OpenGraph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://raphaelfulfilled.tech/projects.html">
+    <meta property="og:title" content="Projects | Raphael Fulfilled">
+    <meta property="og:description" content="Explore selected product design case studies including NutriPadi, SendIt, FlowTask, and PayWise by Raphael Fulfilled.">
+    <meta property="og:image" content="images/NutriPadi.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projects | Raphael Fulfilled">
+    <meta name="twitter:description" content="Explore selected product design case studies by Raphael Fulfilled.">
+    <meta name="twitter:image" content="images/NutriPadi.png">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="projects.css">
 
     <!-- Vercel Speed Insights -->
-    <script>
-      window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-    </script>
+    <script>window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };</script>
     <script defer src="/_vercel/speed-insights/script.js"></script>
 
     <!-- Vercel Analytics -->
-    <script>
-      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-    </script>
+    <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
     <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
-    <!-- Navigation -->
+    <!-- ── Doodle Background (Full Page) ── -->
+    <div class="doodle-field" aria-hidden="true"></div>
+
+    <!-- ══ NAVIGATION ══ -->
     <nav id="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">Fulfilled</a>
-            <button class="mobile-toggle" aria-label="Toggle Navigation">
-                <i class="fas fa-bars"></i>
+            <a href="index.html" class="nav-logo" aria-label="Raphael Fulfilled — Home">
+                <svg class="nav-crown" width="64" height="47" viewBox="0 0 64 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M11.5398 36.3644C12.0841 30.4499 -2.97058 13.5781 2.83356 15.9857C8.6377 18.3933 16.9042 23.5524 16.9042 23.5524C17.5387 15.6699 18.1354 4.54951 20.9495 7.47305C23.7636 10.3966 27.9421 16.6278 32.9975 18.9952C35.6718 12.0922 38.7137 -0.00774741 41.0881 3.51769C43.4625 7.04313 45.427 11.1166 48.827 15.9857C48.827 15.9857 63.5132 -3.87711 62.37 2.91579C61.2267 9.70869 57.588 27.7439 60.1714 27.8517C62.7549 27.9596 10.9955 42.2788 11.5398 36.3644Z" stroke="#00F5FF" stroke-width="3"/>
+                    <path d="M11.8276 44.084C20.684 46.7542 49.9102 39.8813 62.3011 33.5003" stroke="#00F5FF" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-            <ul class="nav-links">
-                <li><a href="index.html#about"><i class="fas fa-user nav-icon"></i>About</a></li>
-                <li><a href="index.html#projects"><i class="fas fa-briefcase nav-icon"></i>Projects</a></li>
-                <li><a href="index.html#contacts"><i class="fas fa-envelope nav-icon"></i>Contacts</a></li>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Page Hero -->
-    <header class="proj-page-hero">
-        <div class="proj-page-hero-inner">
-            <span class="proj-page-eyebrow">My Work</span>
-            <h1 class="proj-page-title">Projects</h1>
-            <p class="proj-page-subtitle">A detailed look at my projects, ranging from enterprise-grade product design to grassroots community campaigns.</p>
-        </div>
+    <!-- ══ MOBILE BOTTOM NAVIGATION DOCK ══ -->
+    <nav class="mobile-bottom-bar" aria-label="Mobile Navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+
+    <!-- ══ PAGE HERO ══ -->
+    <header class="proj-page-hero fade-up">
+        <h1 class="proj-page-title">
+            <svg width="36" height="26" viewBox="0 0 64 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="vertical-align: middle; margin-right: 8px;">
+                <path d="M11.5398 36.3644C12.0841 30.4499 -2.97058 13.5781 2.83356 15.9857C8.6377 18.3933 16.9042 23.5524 16.9042 23.5524C17.5387 15.6699 18.1354 4.54951 20.9495 7.47305C23.7636 10.3966 27.9421 16.6278 32.9975 18.9952C35.6718 12.0922 38.7137 -0.00774741 41.0881 3.51769C43.4625 7.04313 45.427 11.1166 48.827 15.9857C48.827 15.9857 63.5132 -3.87711 62.37 2.91579C61.2267 9.70869 57.588 27.7439 60.1714 27.8517C62.7549 27.9596 10.9955 42.2788 11.5398 36.3644Z" stroke="#00F5FF" stroke-width="4"/>
+                <path d="M11.8276 44.084C20.684 46.7542 49.9102 39.8813 62.3011 33.5003" stroke="#00F5FF" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+            Projects
+        </h1>
     </header>
 
-    <!-- ─── LIVE PROJECTS ─── -->
-    <main class="proj-main">
 
-        <!-- ── Project 1: BusBoard ── -->
-        <article class="proj-detail-card" id="busboard">
-            <div class="proj-detail-visual busboard-visual">
-                <img src="./images/busboard.png" alt="BusBoard app mockup" class="proj-web-mockup">
+    <!-- ══ PROJECTS GRID ══ -->
+    <section class="projects-section" style="padding-top: 1rem;">
+        <div class="projects-grid">
+
+            <!-- Column 1 (Left) -->
+            <div class="projects-col projects-col-left">
+
+                <!-- NutriPadi -->
+                <article class="proj-card fade-up" data-delay="0.05">
+                    <a href="#nutripadi" class="proj-card-link">
+                        <div class="proj-card-img">
+                            <img src="./images/NutriPadi.png" alt="NutriPadi mockup" class="img-align-top">
+                            <div class="proj-card-overlay" aria-hidden="true">
+                                <span>View Details <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                        <div class="proj-card-info">
+                            <div class="proj-card-header">
+                                <h3 class="proj-card-title">NutriPadi</h3>
+                                <span class="proj-card-category">HEALTH &amp; AI TECH</span>
+                            </div>
+                            <p class="proj-card-desc">AI-powered nutrition platform tailored for African foods, featuring instant meal scanning, macro tracking, and personalized diet insights.</p>
+                            <div class="proj-card-submeta">PRODUCT DESIGN + AI · 2025</div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- NACOS Portal -->
+                <article class="proj-card fade-up" data-delay="0.1">
+                    <a href="#nacos" class="proj-card-link">
+                        <div class="proj-card-img">
+                            <img src="./images/NACOS3.png" alt="NACOS Portal mockup">
+                            <div class="proj-card-overlay" aria-hidden="true">
+                                <span>View Details <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                        <div class="proj-card-info">
+                            <div class="proj-card-header">
+                                <h3 class="proj-card-title">NACOS Portal</h3>
+                                <span class="proj-card-category">WEB APP</span>
+                            </div>
+                            <p class="proj-card-desc">Centralised web platform for Computer Science students, replacing fragmented WhatsApp groups with a single student hub.</p>
+                            <div class="proj-card-submeta">UI/UX DESIGN · 2024</div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- AULByeats -->
+                <article class="proj-card fade-up" data-delay="0.15">
+                    <a href="#aulbyeats" class="proj-card-link">
+                        <div class="proj-card-img">
+                            <img src="./images/byeats.png" alt="AULByeats mockup">
+                            <div class="proj-card-overlay" aria-hidden="true">
+                                <span>View Details <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                        <div class="proj-card-info">
+                            <div class="proj-card-header">
+                                <h3 class="proj-card-title">AULByeats</h3>
+                                <span class="proj-card-category">FOOD TECH</span>
+                            </div>
+                            <p class="proj-card-desc">Campus food delivery platform bridging students and vendors at Anchor University with direct location-based delivery.</p>
+                            <div class="proj-card-submeta">PRODUCT DESIGN · 2023</div>
+                        </div>
+                    </a>
+                </article>
+
             </div>
-            <div class="proj-detail-body">
-                <div class="proj-meta">
-                    <span class="proj-tag">Full-Stack Dev</span>
-                    <span class="proj-tag">Web App</span>
-                    <span class="proj-tag">Python</span>
-                    <span class="proj-tag">Flask</span>
-                    <span class="proj-tag">API</span>
-                </div>
-                <h2 class="proj-detail-title">BusBoard</h2>
-                <p class="proj-detail-period"><i class="fas fa-bus"></i> Lagos, Nigeria &nbsp;|&nbsp; BRT Tracking App</p>
-                <p class="proj-detail-desc">
-                    BusBoard is a crowdsourced BRT bus tracking application built for commuters in Lagos. By leveraging the WhatsApp Business API, users can report bus locations and request estimated arrival times directly from WhatsApp. The system stays light, fast, and accurate by relying on real people already on the bus.
-                </p>
 
-                <div class="proj-tools">
-                    <strong>Tools:</strong> Python, Flask, SQLite, WhatsApp API, OpenRouteService, HTML/CSS/JS
-                </div>
-                <a href="https://trybusboard.raphaelfulfilled.tech/" class="btn btn-primary proj-cta">Visit Website <i class="fas fa-arrow-right"></i></a>
+            <!-- Column 2 (Right - Staggered Down) -->
+            <div class="projects-col projects-col-right">
+
+                <!-- Busboard -->
+                <article class="proj-card fade-up" data-delay="0.1">
+                    <a href="#busboard" class="proj-card-link">
+                        <div class="proj-card-img">
+                            <img src="./images/busboard.png" alt="Busboard mockup">
+                            <div class="proj-card-overlay" aria-hidden="true">
+                                <span>View Details <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                        <div class="proj-card-info">
+                            <div class="proj-card-header">
+                                <h3 class="proj-card-title">Busboard</h3>
+                                <span class="proj-card-category">COMMUTER TECH</span>
+                            </div>
+                            <p class="proj-card-desc">Crowdsourced BRT bus tracking application for Lagos commuters, powered by real-time WhatsApp Business API integration.</p>
+                            <div class="proj-card-submeta">FULL-STACK WEB APP · 2024</div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- DocuVerify -->
+                <article class="proj-card fade-up" data-delay="0.2">
+                    <a href="#docuverify" class="proj-card-link">
+                        <div class="proj-card-img">
+                            <img src="./images/docuverify.png" alt="DocuVerify mockup">
+                            <div class="proj-card-overlay" aria-hidden="true">
+                                <span>View Details <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                        <div class="proj-card-info">
+                            <div class="proj-card-header">
+                                <h3 class="proj-card-title">DocuVerify</h3>
+                                <span class="proj-card-category">SECURITY TECH</span>
+                            </div>
+                            <p class="proj-card-desc">Full-stack document authentication platform leveraging Computer Vision and SSIM algorithms to detect document forgery.</p>
+                            <div class="proj-card-submeta">FULL-STACK DEV · 2024</div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Vouchpath -->
+                <article class="proj-card fade-up" data-delay="0.25">
+                    <a href="#vouchpath" class="proj-card-link">
+                        <div class="proj-card-img">
+                            <img src="./images/vouchpath.png" alt="Vouchpath mockup">
+                            <div class="proj-card-overlay" aria-hidden="true">
+                                <span>View Details <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                        <div class="proj-card-info">
+                            <div class="proj-card-header">
+                                <h3 class="proj-card-title">Vouchpath</h3>
+                                <span class="proj-card-category">SAFETY TECH</span>
+                            </div>
+                            <p class="proj-card-desc">Ride-hailing safety app designed for the Nigerian market, bridging the trust gap between riders and drivers with real-time verification.</p>
+                            <div class="proj-card-submeta">MOBILE APP DESIGN · 2024</div>
+                        </div>
+                    </a>
+                </article>
+
             </div>
-        </article>
 
-        <!-- ── Project 2: Vouchpath ── -->
-        <article class="proj-detail-card proj-detail-card--alt" id="vouchpath">
-            <div class="proj-detail-visual vouchpath-visual">
-                <img src="./images/vouchpath.png" alt="Vouchpath app mockup on iPhone" class="proj-phone-mockup">
-            </div>
-            <div class="proj-detail-body">
-                <div class="proj-meta">
-                    <span class="proj-tag">Product Design</span>
-                    <span class="proj-tag">Mobile App</span>
-                    <span class="proj-tag">Safety Tech</span>
-                    <span class="proj-tag">Figma</span>
-                    <span class="proj-tag">Protopie</span>
-                </div>
-                <h2 class="proj-detail-title">Vouchpath</h2>
-                <p class="proj-detail-period"><i class="fas fa-map-marker-alt"></i> Abuja, Nigeria &nbsp;|&nbsp; Ride-hailing Safety App</p>
-                <p class="proj-detail-desc">
-                    Vouchpath is a ride-hailing safety app built for the Nigerian market, specifically designed around the trust gap between riders and drivers that existing platforms ignore. Safety is not just a feature here; it's the core reason the product exists.
-                </p>
-
-                <div class="proj-tools">
-                    <strong>Tools:</strong> Figma, Protopie, Framer, FigJam
-                </div>
-                <a href="#" class="btn btn-primary proj-cta">View Full Case Study <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </article>
-
-                <!-- ── Project 3: NACOS Student Portal ── -->
-        <article class="proj-detail-card" id="nacos">
-            <div class="proj-detail-visual nacos-visual">
-                <img src="./images/NACOS3.png" alt="NACOS Student Portal web app mockup" class="proj-web-mockup">
-            </div>
-            <div class="proj-detail-body">
-                <div class="proj-meta">
-                    <span class="proj-tag">Web App</span>
-                    <span class="proj-tag">UI/UX Design</span>
-                    <span class="proj-tag">Figma</span>
-                    <span class="proj-tag">Student Platform</span>
-                </div>
-                <h2 class="proj-detail-title">NACOS Student Portal</h2>
-                <p class="proj-detail-period"><i class="fas fa-university"></i> Anchor University, Lagos &nbsp;|&nbsp; Web Application</p>
-                <p class="proj-detail-desc">
-                    A centralised web platform for NACOS (Nigerian Association of Computer Science Students) members, designed to replace fragmented WhatsApp groups and informal channels with a single, purpose-built student hub.
-                </p>
-
-                <div class="proj-tools">
-                    <strong>Tools:</strong> Figma, FigJam, Protopie
-                </div>
-                <a href="https://nacos-frontend.vercel.app/" class="btn btn-primary proj-cta">Visit Website <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </article>
-
-
-        <!-- ── Project 4: DocuVerify ── -->
-        <article class="proj-detail-card" id="docuverify">
-            <div class="proj-detail-visual docuverify-visual">
-                <img src="./images/docuverify.png" alt="DocuVerify document authentication platform mockup" class="proj-web-mockup">
-            </div>
-            <div class="proj-detail-body">
-                <div class="proj-meta">
-                    <span class="proj-tag">Full-Stack Dev</span>
-                    <span class="proj-tag">Computer Vision</span>
-                    <span class="proj-tag">Python</span>
-                </div>
-                <h2 class="proj-detail-title">DocuVerify</h2>
-                <p class="proj-detail-period"><i class="fas fa-shield-alt"></i> Web Application &nbsp;|&nbsp; Document Authentication Platform</p>
-                <p class="proj-detail-desc">
-                    DocuVerify is a secure full-stack tool built to detect document forgery. It processes suspect documents against master templates using Structural Similarity (SSIM) algorithms and geometric anchor point analysis. The platform features bulk batch evaluations, secure user sessions, and a comprehensive audit log to track all verification histories.
-                </p>
-
-                <div class="proj-tools">
-                    <strong>Tools:</strong> Python, Flask, OpenCV, scikit-image, SQLite, HTML/CSS/JS
-                </div>
-                <a href="https://docuverify.raphaelfulfilled.tech/" class="btn btn-primary proj-cta">Visit Website <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </article> 
-
-        <!-- ── Project 5: AULByeats ── -->
-        <article class="proj-detail-card" id="aulbyeats">
-            <div class="proj-detail-visual aulbyeats-visual">
-                <img src="./images/byeats.png" alt="AULByeats campus food delivery platform mockup" class="proj-web-mockup">
-            </div>
-            <div class="proj-detail-body">
-                <div class="proj-meta">
-                    <span class="proj-tag">Product Design</span>
-                    <span class="proj-tag">Food Tech</span>
-                    <span class="proj-tag">Figma</span>
-                </div>
-                <h2 class="proj-detail-title">AULByeats</h2>
-                <p class="proj-detail-period"><i class="fas fa-utensils"></i> Anchor University, Lagos &nbsp;|&nbsp; Campus Food Delivery</p>
-                <p class="proj-detail-desc">
-                    AULByeats is a dedicated school platform bridging the gap between hungry students and campus vendors. It allows students to order food easily and receive deliveries directly to their specific location within the campus, cutting down wait times and queues.
-                </p>
-
-                <div class="proj-tools">
-                    <strong>Tools:</strong> Figma, Protopie, FigJam
-                </div>
-                <a href="#" class="btn btn-primary proj-cta">View Full Case Study <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </article>
-
-
-    </main>
-
-    <!-- Social Sidebar (Desktop) -->
-    <div class="social-sidebar">
-        <ul class="social-sidebar-links">
-            <li><a href="https://github.com/x15o3i" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://x.com/0x15o3i" target="_blank" aria-label="X / Twitter"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://linkedin.com/in/x15o3i" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://open.spotify.com/user/31vwubfouxfjtixtbrli3kolezwq" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a></li>
-            <li><a href="mailto:info@raphaelfulfilled.tech" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
-            <li><a href="https://wa.me/2348146251103" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
-        </ul>
-        <div class="sidebar-line"></div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="social-links">
-            <a href="https://github.com/x15o3i" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://x.com/0x15o3i" target="_blank" aria-label="X / Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://linkedin.com/in/x15o3i" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://open.spotify.com/user/31vwubfouxfjtixtbrli3kolezwq" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
-            <a href="mailto:info@raphaelfulfilled.tech" aria-label="Email"><i class="fas fa-envelope"></i></a>
-            <a href="https://wa.me/2348146251103" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
-        <p class="copyright">&copy; Copyright - Raphael Fulfilled 2026</p>
-    </footer>
-    <script>
-        // Scroll Animation Observer (Lightweight Vanilla JS)
-        document.addEventListener('DOMContentLoaded', () => {
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px 0px -50px 0px',
-                threshold: 0.15
-            };
+    </section>
 
-            const observer = new IntersectionObserver((entries, observer) => {
+
+    <!-- ══ FOOTER ══ -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <a href="index.html" class="footer-logo" aria-label="Home">
+                    <svg class="footer-crown" width="64" height="47" viewBox="0 0 64 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M11.5398 36.3644C12.0841 30.4499 -2.97058 13.5781 2.83356 15.9857C8.6377 18.3933 16.9042 23.5524 16.9042 23.5524C17.5387 15.6699 18.1354 4.54951 20.9495 7.47305C23.7636 10.3966 27.9421 16.6278 32.9975 18.9952C35.6718 12.0922 38.7137 -0.00774741 41.0881 3.51769C43.4625 7.04313 45.427 11.1166 48.827 15.9857C48.827 15.9857 63.5132 -3.87711 62.37 2.91579C61.2267 9.70869 57.588 27.7439 60.1714 27.8517C62.7549 27.9596 10.9955 42.2788 11.5398 36.3644Z" stroke="white" stroke-width="3"/>
+                        <path d="M11.8276 44.084C20.684 46.7542 49.9102 39.8813 62.3011 33.5003" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                </a>
+                <p class="footer-copy">© 2026 Raphael Fulfilled</p>
+            </div>
+            <nav class="footer-links" aria-label="Footer navigation">
+                <div class="footer-col">
+                    <a href="https://github.com/x15o3i" target="_blank" rel="noopener">GitHub</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="https://linkedin.com/in/x15o3i" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+                <div class="footer-col">
+                    <a href="mailto:raphaelfulfileed@gmail.com">Email</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </footer>
+
+
+    <!-- ══ SCRIPTS ══ -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            /* ── Scroll animations ── */
+            const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        observer.unobserve(entry.target); 
+                        const delay = parseFloat(entry.target.getAttribute('data-delay') || 0);
+                        entry.target.style.transitionDelay = delay + 's';
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
                     }
                 });
-            }, observerOptions);
+            }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
-            // Dynamically add base animation classes
-            const slideUpSelectors = '.proj-page-hero-inner, .proj-detail-card';
-            
-            document.querySelectorAll(slideUpSelectors).forEach((el, index) => {
-                el.classList.add('slide-up');
+            document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+            /* ── Mobile nav ── */
+            const toggle   = document.getElementById('mobileToggle');
+            const navLinks = document.getElementById('navLinks');
+
+            toggle.addEventListener('click', () => {
+                const expanded = navLinks.classList.toggle('nav-active');
+                toggle.classList.toggle('is-open');
+                toggle.setAttribute('aria-expanded', expanded);
             });
 
-            // Observe all animated elements
-            document.querySelectorAll('.slide-up, .fade-in').forEach(el => {
-                observer.observe(el);
-            });
-
-            // Mobile Nav Toggle Logic
-            const mobileToggle = document.querySelector('.mobile-toggle');
-            const navLinks = document.querySelector('.nav-links');
-            const mobileIcon = mobileToggle.querySelector('i');
-
-            mobileToggle.addEventListener('click', () => {
-                navLinks.classList.toggle('nav-active');
-                if (navLinks.classList.contains('nav-active')) {
-                    mobileIcon.classList.replace('fa-bars', 'fa-times');
-                } else {
-                    mobileIcon.classList.replace('fa-times', 'fa-bars');
-                }
-            });
-
-            // Close mobile menu when a link is clicked
-            document.querySelectorAll('.nav-links a').forEach(link => {
+            navLinks.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
                     navLinks.classList.remove('nav-active');
-                    mobileIcon.classList.replace('fa-times', 'fa-bars');
+                    toggle.classList.remove('is-open');
+                    toggle.setAttribute('aria-expanded', 'false');
                 });
             });
+
         });
     </script>
+
 </body>
 </html>
