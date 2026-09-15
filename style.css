@@ -1883,6 +1883,45 @@ button {
 }
 
 @media (max-width: 768px) {
+  /* Remove top bar container styling on mobile */
+  #navbar {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-bottom: none !important;
+    padding: 1.2rem 0 0.4rem !important;
+    pointer-events: none;
+  }
+
+  .nav-container {
+    pointer-events: auto;
+  }
+
+  /* Crown Logo Mobile Animation & Interactive Spring Glow */
+  .nav-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .nav-crown {
+    height: 42px !important;
+    width: auto !important;
+    animation: crownEntrancePop 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s backwards, mobileCrownFloat 4.8s ease-in-out 0.9s infinite;
+    will-change: transform, filter;
+    transform-origin: center center;
+    filter: drop-shadow(0 3px 8px rgba(0, 245, 255, 0.3));
+  }
+
+  .nav-logo:active .nav-crown,
+  .nav-logo:hover .nav-crown {
+    animation-play-state: paused;
+    transform: scale(1.22) rotate(-12deg) !important;
+    filter: drop-shadow(0 8px 22px rgba(0, 245, 255, 0.65)) !important;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
+  }
+
   /* Hide old mobile hamburger button & top nav links on mobile */
   .mobile-toggle {
     display: none !important;
@@ -1967,6 +2006,31 @@ button {
   to {
     opacity: 1;
     transform: translate(-50%, 0) scale(1);
+  }
+}
+
+@keyframes mobileCrownFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-3deg);
+    filter: drop-shadow(0 3px 8px rgba(0, 245, 255, 0.3));
+  }
+  50% {
+    transform: translateY(-6px) rotate(4deg);
+    filter: drop-shadow(0 8px 16px rgba(0, 245, 255, 0.55));
+  }
+}
+
+@keyframes crownEntrancePop {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(-24deg) translateY(-25px);
+  }
+  65% {
+    transform: scale(1.18) rotate(8deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-3deg);
   }
 }
 
