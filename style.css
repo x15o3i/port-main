@@ -1460,12 +1460,13 @@ button {
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 16px 36px rgba(0,0,0,0.08);
-  transition: transform 0.4s var(--ease);
   z-index: 5;
+  will-change: transform;
+  transition: box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .about-photo:hover {
-  transform: scale(1.06) rotate(0deg) !important;
+  box-shadow: 0 24px 48px rgba(0,0,0,0.18);
   z-index: 20;
 }
 
@@ -1473,6 +1474,12 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.about-photo:hover img {
+  transform: scale(1.08);
 }
 
 .bw-filter {
@@ -1650,6 +1657,14 @@ button {
   box-shadow: 0 10px 25px rgba(0,0,0,0.06);
   transform: rotate(-2deg);
   animation: bubblePopIn 0.85s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s backwards, bubbleFloat 4.8s ease-in-out 1s infinite;
+  transition: box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+  will-change: transform;
+  cursor: pointer;
+}
+
+.contact-bubble:hover {
+  background: #B5A2FB;
+  box-shadow: 0 18px 36px rgba(196, 181, 253, 0.4);
 }
 
 .contact-bubble span {
@@ -1660,22 +1675,39 @@ button {
   color: #111111;
   text-align: center;
   display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.contact-bubble:hover span {
+  transform: scale(1.04);
 }
 
 .contact-phone-illustration {
   display: flex;
   justify-content: center;
   align-items: center;
-  filter: drop-shadow(0 14px 28px rgba(0,0,0,0.08));
   width: 100%;
   animation: illustrationFadeUp 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.25s backwards, illustrationFloat 6s ease-in-out 1.2s infinite;
+  will-change: transform;
 }
 
-.contact-phone-illustration img {
+.contact-phone-illustration img,
+.contact-illustration-img {
   max-width: 480px;
   width: 100%;
   height: auto;
   display: block;
+  filter: drop-shadow(0 14px 28px rgba(0,0,0,0.08));
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, filter;
+  cursor: pointer;
+}
+
+.contact-phone-illustration:hover img,
+.contact-phone-illustration:hover .contact-illustration-img {
+  transform: scale(1.05) translateY(-8px);
+  filter: drop-shadow(0 24px 44px rgba(37, 99, 235, 0.22));
 }
 
 /* Right Form Column */
