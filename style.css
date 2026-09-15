@@ -2079,3 +2079,220 @@ button {
     transform: translateX(-50%) translateY(0) scale(1);
   }
 }
+
+/* ══════════════════════════════════════════════
+   COMPREHENSIVE RESPONSIVE STYLING (Tablets & Mobile)
+══════════════════════════════════════════════ */
+
+/* Prevent horizontal overflow across all screens */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* ── Medium & Large Tablets (max-width: 1024px) ── */
+@media (max-width: 1024px) {
+  .hero-inner {
+    padding: 0 4%;
+  }
+
+  .projects-grid {
+    gap: 3rem 2rem;
+  }
+
+  .proj-detail-card {
+    gap: 2.5rem;
+  }
+
+  .footer-inner {
+    gap: 2rem;
+  }
+}
+
+/* ── Standard Tablets & Small Laptops (max-width: 992px) ── */
+@media (max-width: 992px) {
+  /* Projects Showcase Grids */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .projects-col-right {
+    margin-top: 0 !important;
+  }
+
+  /* Projects Detail Page Cards */
+  .proj-detail-card {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+    direction: ltr !important;
+  }
+
+  .proj-detail-card:nth-child(even) {
+    direction: ltr !important;
+  }
+
+  .proj-detail-card:nth-child(even) > * {
+    direction: ltr !important;
+  }
+
+  /* Contact Page Layout */
+  .contact-container {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+  }
+
+  /* About Page Layout */
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .about-photo {
+    position: static !important;
+    margin: 1.25rem auto !important;
+    max-width: 300px;
+    width: 100%;
+    height: 210px;
+    transform: none !important;
+    animation: aboutTextFadeUp 0.8s ease backwards !important;
+  }
+}
+
+/* ── Mobile & Tablets (max-width: 768px) ── */
+@media (max-width: 768px) {
+  /* Hero Section */
+  .hero {
+    min-height: auto;
+    padding: 3rem 0 4rem;
+  }
+
+  .greeting-avatar-wrap {
+    width: 90px;
+    height: 42px;
+    border-radius: 21px;
+  }
+
+  .greeting-crown {
+    width: 26px;
+  }
+
+  .hero-greeting {
+    margin-bottom: 0.6rem;
+  }
+
+  /* Role Circles */
+  .hero-role-circles {
+    gap: 0.5rem;
+  }
+
+  .role-circle {
+    width: 95px;
+    height: 95px;
+  }
+
+  .role-circle span {
+    font-size: 0.95rem;
+  }
+
+  /* Footer Layout */
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+  }
+
+  .footer-links {
+    gap: 3.5rem;
+  }
+}
+
+/* ── Small Mobile Devices (max-width: 480px) ── */
+@media (max-width: 480px) {
+  /* Global Padding Adjustments */
+  .hero-inner,
+  .projects-section,
+  .contact-inner,
+  .proj-page-hero,
+  .proj-main,
+  .about-container,
+  .contact-page-section {
+    padding-left: 4% !important;
+    padding-right: 4% !important;
+  }
+
+  /* Prevent iOS zoom on form inputs */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    font-size: 16px !important;
+  }
+
+  /* Floating Mobile Bottom Dock - Ultra Compact for Small Screens */
+  .mobile-bottom-bar {
+    bottom: max(12px, calc(8px + env(safe-area-inset-bottom))) !important;
+    padding: 4px 6px !important;
+    gap: 2px !important;
+    max-width: calc(100vw - 16px) !important;
+  }
+
+  .mobile-bottom-bar a {
+    font-size: 1.05rem !important;
+    padding: 5px 11px 6px !important;
+    border-radius: 20px !important;
+  }
+
+  /* Hero Adjustments */
+  .greeting-text {
+    font-size: 1.6rem !important;
+  }
+
+  .hero-title {
+    font-size: 2.4rem !important;
+  }
+
+  .role-circle {
+    width: 82px;
+    height: 82px;
+  }
+
+  .role-circle span {
+    font-size: 0.85rem;
+  }
+
+  /* Contact Page Elements */
+  .contact-bubble {
+    padding: 12px 20px !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .contact-bubble span {
+    font-size: 1.15rem !important;
+  }
+
+  .contact-illustration-img {
+    max-width: 320px !important;
+  }
+
+  /* Projects Detail Cards */
+  .proj-detail-visual {
+    border-radius: 16px !important;
+    padding: 1.5rem 1rem !important;
+  }
+
+  .proj-meta {
+    gap: 0.3rem !important;
+  }
+
+  .proj-tag {
+    font-size: 0.72rem !important;
+    padding: 3px 8px !important;
+  }
+
+  .footer-links {
+    gap: 2.5rem;
+    flex-wrap: wrap;
+  }
+}
