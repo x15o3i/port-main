@@ -1487,13 +1487,13 @@ button {
   filter: grayscale(100%) contrast(1.1);
 }
 
-.photo-top-center {
+.photo-right-top {
   width: 220px;
   height: 140px;
-  top: -50px;
-  left: 50%;
-  transform: translateX(-50%) rotate(2deg);
-  animation: floatInTop 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s backwards, floatBob1 6s ease-in-out 1.2s infinite;
+  top: 10%;
+  right: 2.5%;
+  transform: rotate(3deg);
+  animation: floatInRightTop 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s backwards, floatBob1 6s ease-in-out 1.2s infinite;
 }
 
 .photo-left-top {
@@ -1535,14 +1535,14 @@ button {
   }
 }
 
-@keyframes floatInTop {
+@keyframes floatInRightTop {
   from {
     opacity: 0;
-    transform: translateX(-50%) translateY(-60px) scale(0.85);
+    transform: translateX(50px) translateY(-40px) rotate(12deg) scale(0.85);
   }
   to {
     opacity: 1;
-    transform: translateX(-50%) translateY(0) rotate(2deg) scale(1);
+    transform: translateX(0) translateY(0) rotate(3deg) scale(1);
   }
 }
 
@@ -2153,19 +2153,29 @@ html, body {
   }
 
   .about-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1.5rem;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 1.5rem !important;
     padding-top: 0 !important;
     min-height: auto !important;
   }
 
   .about-content-inner {
-    padding-top: 0 !important;
+    display: contents !important;
+  }
+
+  .about-eyebrow {
+    order: 1 !important;
+  }
+
+  .about-main-text {
+    order: 2 !important;
   }
 
   .about-photos-wrap {
+    order: 3 !important;
     display: flex !important;
     flex-direction: row !important;
     gap: 14px !important;
@@ -2175,8 +2185,12 @@ html, body {
     padding: 12px 12px 20px !important;
     width: 100% !important;
     max-width: 100vw !important;
-    margin-bottom: 1rem !important;
+    margin-bottom: 0.5rem !important;
     scrollbar-width: none;
+  }
+
+  .about-action {
+    order: 4 !important;
   }
 
   .about-photos-wrap::-webkit-scrollbar {
