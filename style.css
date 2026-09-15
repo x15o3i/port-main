@@ -1487,39 +1487,39 @@ button {
   filter: grayscale(100%) contrast(1.1);
 }
 
-.photo-right-top {
-  width: 220px;
-  height: 140px;
-  top: 10%;
-  right: 2.5%;
-  transform: rotate(3deg);
-  animation: floatInRightTop 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s backwards, floatBob1 6s ease-in-out 1.2s infinite;
+.photo-left-top {
+  width: 190px;
+  height: 250px;
+  top: 6%;
+  left: 3.5%;
+  transform: rotate(-4deg);
+  animation: floatInLeftTop 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s backwards, floatBob2 6.5s ease-in-out 1.3s infinite;
 }
 
-.photo-left-top {
-  width: 180px;
+.photo-right-top {
+  width: 190px;
   height: 250px;
-  top: 12%;
-  left: 2%;
-  transform: rotate(-6deg);
-  animation: floatInLeftTop 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s backwards, floatBob2 6.5s ease-in-out 1.3s infinite;
+  top: 6%;
+  right: 3.5%;
+  transform: rotate(4deg);
+  animation: floatInRightTop 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s backwards, floatBob1 6s ease-in-out 1.2s infinite;
 }
 
 .photo-left-bottom {
   width: 210px;
-  height: 140px;
-  bottom: 8%;
-  left: 4%;
+  height: 145px;
+  bottom: 6%;
+  left: 3.5%;
   transform: rotate(3deg);
   animation: floatInLeftBottom 1s cubic-bezier(0.16, 1, 0.3, 1) 0.45s backwards, floatBob3 5.5s ease-in-out 1.5s infinite;
 }
 
 .photo-right-bottom {
-  width: 190px;
-  height: 260px;
+  width: 210px;
+  height: 145px;
   bottom: 6%;
-  right: 2%;
-  transform: rotate(4deg);
+  right: 3.5%;
+  transform: rotate(-3deg);
   animation: floatInRightBottom 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s backwards, floatBob4 7s ease-in-out 1.6s infinite;
 }
 
@@ -1538,11 +1538,11 @@ button {
 @keyframes floatInRightTop {
   from {
     opacity: 0;
-    transform: translateX(50px) translateY(-40px) rotate(12deg) scale(0.85);
+    transform: translateX(40px) translateY(-30px) rotate(12deg) scale(0.85);
   }
   to {
     opacity: 1;
-    transform: translateX(0) translateY(0) rotate(3deg) scale(1);
+    transform: translateX(0) translateY(0) rotate(4deg) scale(1);
   }
 }
 
@@ -1553,7 +1553,7 @@ button {
   }
   to {
     opacity: 1;
-    transform: translateX(0) translateY(0) rotate(-6deg) scale(1);
+    transform: translateX(0) translateY(0) rotate(-4deg) scale(1);
   }
 }
 
@@ -1575,19 +1575,19 @@ button {
   }
   to {
     opacity: 1;
-    transform: translateX(0) translateY(0) rotate(4deg) scale(1);
+    transform: translateX(0) translateY(0) rotate(-3deg) scale(1);
   }
 }
 
 /* Gentle Bobbing Animations */
 @keyframes floatBob1 {
-  0%, 100% { transform: translateX(-50%) rotate(2deg) translateY(0); }
-  50% { transform: translateX(-50%) rotate(2deg) translateY(-8px); }
+  0%, 100% { transform: rotate(4deg) translateY(0); }
+  50% { transform: rotate(3deg) translateY(-8px); }
 }
 
 @keyframes floatBob2 {
-  0%, 100% { transform: rotate(-6deg) translateY(0); }
-  50% { transform: rotate(-5deg) translateY(-10px); }
+  0%, 100% { transform: rotate(-4deg) translateY(0); }
+  50% { transform: rotate(-3deg) translateY(-10px); }
 }
 
 @keyframes floatBob3 {
@@ -1596,8 +1596,8 @@ button {
 }
 
 @keyframes floatBob4 {
-  0%, 100% { transform: rotate(4deg) translateY(0); }
-  50% { transform: rotate(3deg) translateY(-9px); }
+  0%, 100% { transform: rotate(-3deg) translateY(0); }
+  50% { transform: rotate(-2deg) translateY(-9px); }
 }
 
 /* Responsive adjustment for floating photos */
