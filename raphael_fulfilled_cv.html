@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raphael Fulfilled — Product Designer CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --text: #1a1a1a;
+            --muted: #555;
+            --accent: #0066cc;
+            --border: #ddd;
+            --bg: #fff;
+            --section-gap: 22px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.55;
+            font-size: 10.5pt;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in 0.6in;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                font-size: 10pt;
+            }
+            @page {
+                margin: 0.5in 0.55in;
+                size: letter;
+            }
+            .page-break { page-break-before: always; }
+        }
+
+        /* ── Header ── */
+        .cv-header {
+            text-align: center;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--text);
+            margin-bottom: var(--section-gap);
+        }
+
+        .cv-name {
+            font-size: 26pt;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .cv-tagline {
+            font-size: 11.5pt;
+            font-weight: 500;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        .cv-contact {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 6px 18px;
+            font-size: 9.5pt;
+            color: var(--muted);
+        }
+
+        .cv-contact a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+
+        .cv-contact a:hover { color: var(--accent); }
+
+        .cv-contact .sep {
+            color: #bbb;
+        }
+
+        /* ── Section ── */
+        .cv-section {
+            margin-bottom: var(--section-gap);
+        }
+
+        .cv-section-title {
+            font-size: 11pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text);
+            border-bottom: 1.5px solid var(--border);
+            padding-bottom: 4px;
+            margin-bottom: 12px;
+        }
+
+        /* ── Summary ── */
+        .cv-summary {
+            font-size: 10.5pt;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* ── Experience ── */
+        .cv-entry {
+            margin-bottom: 16px;
+        }
+
+        .cv-entry:last-child { margin-bottom: 0; }
+
+        .cv-entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+
+        .cv-role {
+            font-weight: 700;
+            font-size: 10.5pt;
+        }
+
+        .cv-dates {
+            font-size: 9.5pt;
+            color: var(--muted);
+            white-space: nowrap;
+        }
+
+        .cv-company {
+            font-weight: 500;
+            font-size: 10pt;
+            color: var(--muted);
+            margin-bottom: 4px;
+        }
+
+        .cv-company-loc {
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .cv-bullets {
+            padding-left: 18px;
+        }
+
+        .cv-bullets li {
+            margin-bottom: 3px;
+            line-height: 1.5;
+        }
+
+        .cv-bullets li::marker {
+            color: #999;
+        }
+
+        strong.metric {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* ── Projects ── */
+        .cv-project {
+            margin-bottom: 14px;
+        }
+
+        .cv-project:last-child { margin-bottom: 0; }
+
+        .cv-project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+
+        .cv-project-name {
+            font-weight: 700;
+            font-size: 10.5pt;
+        }
+
+        .cv-project-tag {
+            font-size: 9pt;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .cv-project-desc {
+            color: #444;
+            margin-bottom: 3px;
+        }
+
+        /* ── Skills ── */
+        .cv-skills-grid {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 6px 16px;
+        }
+
+        .cv-skill-label {
+            font-weight: 600;
+            font-size: 10pt;
+            color: var(--text);
+        }
+
+        .cv-skill-value {
+            color: #444;
+        }
+
+        /* ── Education ── */
+        .cv-edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .cv-edu-school {
+            font-weight: 700;
+            font-size: 10.5pt;
+        }
+
+        .cv-edu-degree {
+            font-weight: 500;
+            color: var(--muted);
+            font-size: 10pt;
+        }
+
+        /* ── Certifications ── */
+        .cv-certs {
+            columns: 2;
+            column-gap: 24px;
+        }
+
+        .cv-certs li {
+            margin-bottom: 3px;
+            break-inside: avoid;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ══ HEADER ══ -->
+    <header class="cv-header">
+        <h1 class="cv-name">Raphael Fulfilled</h1>
+        <p class="cv-tagline">Product Designer · UI/UX · Front-End Developer</p>
+        <div class="cv-contact">
+            <span>Lagos, Nigeria</span>
+            <span class="sep">·</span>
+            <a href="tel:+2348146251103">0814 625 1103</a>
+            <span class="sep">·</span>
+            <a href="mailto:raphaelfulfilled@gmail.com">raphaelfulfilled@gmail.com</a>
+            <span class="sep">·</span>
+            <a href="https://raphaelfulfilled.tech">raphaelfulfilled.tech</a>
+            <span class="sep">·</span>
+            <a href="https://linkedin.com/in/raphaelfulfilled">linkedin.com/in/raphaelfulfilled</a>
+        </div>
+    </header>
+
+    <!-- ══ SUMMARY ══ -->
+    <section class="cv-section">
+        <h2 class="cv-section-title">Professional Summary</h2>
+        <p class="cv-summary">
+            Product Designer with <strong>2+ years</strong> of experience shipping user-centred digital products across fintech, edtech, and health-tech. Combines UI/UX design expertise with front-end development skills (HTML, CSS, JavaScript, Python) to bridge the gap between design and engineering. Proven track record of improving key metrics — <strong class="metric">25% lift in onboarding completion</strong>, <strong class="metric">20% reduction in navigation errors</strong> — through research-driven design decisions. Comfortable owning the full product design cycle from discovery to high-fidelity prototypes and developer handoff.
+        </p>
+    </section>
+
+    <!-- ══ EXPERIENCE ══ -->
+    <section class="cv-section">
+        <h2 class="cv-section-title">Experience</h2>
+
+        <!-- FlexiSAF -->
+        <div class="cv-entry">
+            <div class="cv-entry-header">
+                <span class="cv-role">Product Designer</span>
+                <span class="cv-dates">May 2026 – Jul 2026</span>
+            </div>
+            <div class="cv-company">FlexiSAF Edusoft Limited <span class="cv-company-loc">· Abuja, Nigeria</span></div>
+            <ul class="cv-bullets">
+                <li>Designed end-to-end user flows and high-fidelity prototypes for an enterprise edtech platform serving <strong class="metric">1,000+</strong> educational institutions across Nigeria</li>
+                <li>Conducted usability testing sessions with <strong class="metric">10+</strong> stakeholders per sprint cycle, translating feedback into actionable design iterations</li>
+                <li>Collaborated with cross-functional engineering teams to ensure design consistency and <strong class="metric">95%</strong> design-to-code fidelity using Figma component libraries</li>
+            </ul>
+        </div>
+
+        <!-- ipNX -->
+        <div class="cv-entry">
+            <div class="cv-entry-header">
+                <span class="cv-role">Retail Network Engineer</span>
+                <span class="cv-dates">Apr 2025 – Sep 2025</span>
+            </div>
+            <div class="cv-company">ipNX Nigeria Limited <span class="cv-company-loc">· Port Harcourt, Nigeria</span></div>
+            <ul class="cv-bullets">
+                <li>Deployed and configured fibre-optic network infrastructure for <strong class="metric">50+</strong> retail and enterprise clients</li>
+                <li>Reduced average installation turnaround time by <strong class="metric">15%</strong> through improved workflow documentation and coordination</li>
+                <li>Troubleshot network issues across LAN/WAN environments, maintaining <strong class="metric">99%</strong> uptime SLA for managed clients</li>
+            </ul>
+        </div>
+
+        <!-- RaLBW -->
+        <div class="cv-entry">
+            <div class="cv-entry-header">
+                <span class="cv-role">Product Designer</span>
+                <span class="cv-dates">Aug 2024 – Dec 2025</span>
+            </div>
+            <div class="cv-company">RaLBW <span class="cv-company-loc">· Lagos, Nigeria</span></div>
+            <ul class="cv-bullets">
+                <li>Translated complex logical processes into clear, user-friendly interfaces across <strong class="metric">3</strong> product verticals</li>
+                <li>Designed user flows, wireframes, and high-fidelity prototypes, contributing to a <strong class="metric">25%</strong> improvement in onboarding completion rates</li>
+                <li>Achieved a <strong class="metric">20%</strong> reduction in user navigation errors through iterative usability testing and information architecture restructuring</li>
+                <li>Collaborated with <strong class="metric">4</strong> developers to deliver scalable, consistent product experiences using shared Figma design systems</li>
+            </ul>
+        </div>
+
+        <!-- NACOS -->
+        <div class="cv-entry">
+            <div class="cv-entry-header">
+                <span class="cv-role">Secretary General</span>
+                <span class="cv-dates">Dec 2025 – Aug 2026</span>
+            </div>
+            <div class="cv-company">NACOS, Anchor University <span class="cv-company-loc">· Lagos, Nigeria</span></div>
+            <ul class="cv-bullets">
+                <li>Led strategic communications and administrative oversight for the Computer Science student body of <strong class="metric">200+</strong> members</li>
+                <li>Managed meeting coordination, records management, and policy implementation across <strong class="metric">4</strong> departmental committees</li>
+                <li>Served as official liaison between students, faculty, and university administration</li>
+            </ul>
+        </div>
+
+        <!-- Cowrywise -->
+        <div class="cv-entry">
+            <div class="cv-entry-header">
+                <span class="cv-role">Campus Ambassador</span>
+                <span class="cv-dates">Dec 2022 – Sep 2026</span>
+            </div>
+            <div class="cv-company">Cowrywise <span class="cv-company-loc">· Lagos, Nigeria</span></div>
+            <ul class="cv-bullets">
+                <li>Drove brand awareness and user acquisition for Nigeria's leading savings & investment platform across Anchor University campus</li>
+                <li>Organised <strong class="metric">5+</strong> financial literacy events and onboarded <strong class="metric">100+</strong> new users to the platform over 3+ years</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ══ KEY PROJECTS ══ -->
+    <section class="cv-section">
+        <h2 class="cv-section-title">Key Projects</h2>
+
+        <div class="cv-project">
+            <div class="cv-project-header">
+                <span class="cv-project-name">NutriPadi — AI Nutrition Platform</span>
+                <span class="cv-project-tag">Product Design + AI · 2025</span>
+            </div>
+            <p class="cv-project-desc">Designed an AI-powered nutrition platform tailored for African foods. Led end-to-end product design from user research through to shipped product featuring instant meal scanning, macro tracking, and personalised diet insights.</p>
+            <ul class="cv-bullets">
+                <li>Built <strong class="metric">40+</strong> screens across onboarding, scanning, dashboard, and profile flows</li>
+                <li>Designed the AI-powered meal recognition interface achieving <strong class="metric">&lt;3 second</strong> scan-to-result experience</li>
+            </ul>
+        </div>
+
+        <div class="cv-project">
+            <div class="cv-project-header">
+                <span class="cv-project-name">BusBoard — Smart Commute Companion</span>
+                <span class="cv-project-tag">Full-Stack Web App · 2024</span>
+            </div>
+            <p class="cv-project-desc">Designed and developed a crowdsourced BRT bus tracking application for Lagos commuters, powered by real-time WhatsApp Business API integration.</p>
+            <ul class="cv-bullets">
+                <li>Full-stack implementation using React, Node.js, and WhatsApp Business API</li>
+                <li>Designed real-time tracking dashboard with <strong class="metric">&lt;2 second</strong> data refresh intervals</li>
+            </ul>
+        </div>
+
+        <div class="cv-project">
+            <div class="cv-project-header">
+                <span class="cv-project-name">NACOS Student Portal</span>
+                <span class="cv-project-tag">UI/UX Design · 2024</span>
+            </div>
+            <p class="cv-project-desc">Centralised web platform for Computer Science students, replacing fragmented WhatsApp groups with a single student hub. Designed and shipped the complete frontend.</p>
+            <ul class="cv-bullets">
+                <li>Consolidated <strong class="metric">5+</strong> fragmented communication channels into one unified platform</li>
+                <li>Designed responsive interface serving <strong class="metric">200+</strong> active student users</li>
+            </ul>
+        </div>
+
+        <div class="cv-project">
+            <div class="cv-project-header">
+                <span class="cv-project-name">DocuVerify — Document Authentication</span>
+                <span class="cv-project-tag">Full-Stack Dev · 2024</span>
+            </div>
+            <p class="cv-project-desc">Full-stack document authentication platform leveraging Computer Vision and SSIM algorithms to detect document forgery. Built with Python/Flask backend.</p>
+        </div>
+
+        <div class="cv-project">
+            <div class="cv-project-header">
+                <span class="cv-project-name">AULByeats — Campus Food Delivery</span>
+                <span class="cv-project-tag">Product Design · 2023</span>
+            </div>
+            <p class="cv-project-desc">Campus food delivery platform bridging students and vendors at Anchor University. Designed complete ordering flow with location-based delivery tracking.</p>
+        </div>
+    </section>
+
+    <!-- ══ SKILLS ══ -->
+    <section class="cv-section">
+        <h2 class="cv-section-title">Skills</h2>
+        <div class="cv-skills-grid">
+            <span class="cv-skill-label">Design</span>
+            <span class="cv-skill-value">Figma, Framer, Adobe XD, Canva · Wireframing, Prototyping, Design Systems, Interaction Design</span>
+
+            <span class="cv-skill-label">Research</span>
+            <span class="cv-skill-value">User Interviews, Usability Testing, Competitive Analysis, Information Architecture, Persona Development</span>
+
+            <span class="cv-skill-label">Development</span>
+            <span class="cv-skill-value">HTML5, CSS3, JavaScript, React, Python, Flask, Node.js, Git</span>
+
+            <span class="cv-skill-label">Other</span>
+            <span class="cv-skill-value">Agile/Scrum, Jira, Design-to-Dev Handoff, Cross-Functional Collaboration, Networking (LAN/WAN/Fibre)</span>
+        </div>
+    </section>
+
+    <!-- ══ EDUCATION ══ -->
+    <section class="cv-section">
+        <h2 class="cv-section-title">Education</h2>
+        <div class="cv-entry">
+            <div class="cv-edu-header">
+                <span class="cv-edu-school">Anchor University, Lagos</span>
+                <span class="cv-dates">Sep 2022 – Aug 2026</span>
+            </div>
+            <p class="cv-edu-degree">Bachelor of Science (B.Sc.) — Computer Science</p>
+        </div>
+    </section>
+
+    <!-- ══ CERTIFICATIONS ══ -->
+    <section class="cv-section">
+        <h2 class="cv-section-title">Certifications</h2>
+        <ul class="cv-certs cv-bullets">
+            <li>Zero Code and Blockchain Tech for Early Career Professionals</li>
+            <li>Python Developer Certification</li>
+            <li>Introduction to JavaScript</li>
+            <li>Vibe Coding</li>
+            <li>Data Analytics with AI</li>
+        </ul>
+    </section>
+
+</body>
+</html>
