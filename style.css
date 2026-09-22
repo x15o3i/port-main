@@ -2343,3 +2343,111 @@ html, body {
     flex-wrap: wrap;
   }
 }
+
+/* ══════════════════════════════════════════════
+   NOTION SHOWCASE BANNER
+══════════════════════════════════════════════ */
+.notion-showcase-section {
+  max-width: 1240px;
+  margin: 0 auto 3.5rem;
+  padding: 0 5%;
+}
+
+.notion-showcase-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: #FFFFFF;
+  border: 1.5px solid #111111;
+  border-radius: 18px;
+  padding: 2.2rem 2.5rem;
+  text-decoration: none;
+  color: #111111;
+  position: relative;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+.notion-showcase-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.notion-showcase-info {
+  flex: 1;
+}
+
+.notion-showcase-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #F3EFEA;
+  color: #111111;
+  border: 1px solid #DCD6CD;
+  padding: 5px 13px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.notion-showcase-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+  font-weight: 800;
+  color: #111111;
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+}
+
+.notion-showcase-desc {
+  font-size: 0.96rem;
+  color: #555555;
+  line-height: 1.6;
+  max-width: 680px;
+}
+
+.notion-showcase-btn-wrap {
+  flex-shrink: 0;
+}
+
+.btn-notion-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #111111;
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 700;
+  padding: 0.9rem 1.8rem;
+  border-radius: 999px;
+  transition: all 0.25s ease;
+}
+
+.notion-showcase-card:hover .btn-notion-action {
+  background: #333333;
+  color: #FFFFFF;
+  transform: translateX(3px);
+}
+
+@media (max-width: 768px) {
+  .notion-showcase-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.6rem 1.4rem;
+    gap: 1.4rem;
+  }
+  
+  .notion-showcase-btn-wrap {
+    width: 100%;
+  }
+
+  .btn-notion-action {
+    width: 100%;
+    justify-content: center;
+  }
+}
